@@ -1,0 +1,388 @@
+<style>
+  .mobile_all_login_details {
+    display: none;
+  }
+
+  .center_img {
+    background-position: center;
+  }
+
+  .banner-5-txt {
+    min-height: 300px;
+    padding: 25px 35px;
+  }
+</style>
+<link href="css/logo-slider.css" rel="stylesheet">
+<!-- start of hero -->
+<link href="css/swiper.min.css" rel="stylesheet">
+<link href="css/all.min.css" rel="stylesheet">
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet">
+<link href="css/owl.carousel.css" rel="stylesheet">
+<link rel="stylesheet" href="css/magnific-popup.css">
+<style>
+
+</style>
+<section class="hero-slider hero-style chirtmas_login" is-home-page="isHomePage">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="slide-inner slide-bg-image center_img"
+          style="background-image:url('images/slider_images/02_01_23_slider_1.jpg');">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</section>
+<div class="bootom-tile-section">
+  <div class="container align-ic-center">
+    <div class="row">
+      <div class="d-flex d-flex-block align-items-center tile-height">
+        
+        <!-- <div class="col-md-3 col-sm-6 col-xs-3 bottom-tile-slider">
+          <a href="#" title="Examination Form">
+            <div class="abox-1 icon-xs"> <i class="fab fa-wpforms tile-icons"></i>
+              <div class="abox-1-txt">
+                <h5 class="h5-md"> Examination Form</h5>
+                <p class="p-md">Fill up the examination form</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-3 bottom-tile-slider">
+          <a href="" title="View Result 2022">
+            <div class="abox-1 icon-xs"><i class="fa fa-eye tile-icons" aria-hidden="true"></i>
+              <div class="abox-1-txt">
+                <h5 class="h5-md">View Result 2023</h5>
+                <p class="p-md">View your results easily</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-3 bottom-tile-slider">
+          <a href="#" title="Online Classes">
+            <div class="abox-1 icon-xs"><i class="fa fa-chalkboard tile-icons" aria-hidden="true"></i>
+              <div class="abox-1-txt">
+                <h5 class="h5-md"> Online Classes</h5>
+                <p class="p-md">Attend the classes digitally</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-3 bottom-tile-slider">
+          <div class="abox-1 icon-xs news-height">
+            <i class="fa fa-eye tile-icons viewmore-notice-btn" aria-hidden="true"></i>
+            <div class="abox-1-txt">
+              <h5 class="h5-md viewmore-notice-btn">Notices & Updates</h5>
+
+              <ul class="news-section ul_class_imp demo1">
+                <li class="news-item text-white"><a target="_blank" href="#">Courses Brochure </a></li>
+              </ul>
+
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<div class="uni_mainWrapper">
+  <div class="container">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-8">
+
+            <div class="online_wrapper">
+
+              <div class="admission_div">
+                <form method="post" name="admission_form" id="admission_form" enctype="multipart/form-data">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="common_details">
+                        <div class="col-md-12">
+                          <h3>REQUEST INFORMATION</h3>
+                          <small>Please provide your personal details</small>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h4 ng-show="successMessage" style="text-align: center;color: green; margin-bottom: 10px;">{{ successMessage }}</h4>
+                      <h4 ng-show="errorMessage" style="text-align: center;color: red; margin-bottom: 10px;margin-top: 10px;">{{ errorMessage }}</h4>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-4">
+
+                        <div class="form-group">
+                          <label>First Name <span class="req">*</span></label>
+                          <input type="text" name="first_name" ng-model="formData.first_name" id="first_name"
+                            class="form-control charector" placeholder="First Name" required>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label>Last Name <span class="req">*</span></label>
+                          <input type="text" name="last_name" ng-model="formData.last_name" id="last_name"
+                            class="form-control charector" placeholder="Last Name" required>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label>Email ID <span class="req">*</span></label>
+                          <input autocomplete="off" type="email" name="email" ng-model="formData.email" id="email"
+                            class="form-control" placeholder="Email ID" required>
+                          <div class="error" id="email_error"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label>Mobile Number <span class="req">*</span></label>
+                          <input autocomplete="off" type="text" name="mobile" ng-model="formData.mobile" id="mobile"
+                            class="form-control number_only" placeholder="Mobile Number" required>
+                        </div>
+                      </div>
+                      <!-- <div class="col-md-4">
+                        <div class="form-group">
+                          <label>Gender <span class="req">*</span></label>
+                          <select id="gender" name="gender" class="form-control">
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Transgender">Transgender</option>
+                          </select>
+                        </div>
+                      </div> -->
+                      <div class="col-sm-4">
+                        <div class="form-group">
+                          <label>Country <span class="req">*</span></label>
+
+                          <select class="form-control js-example-basic-single" name="country"
+                            ng-model="formData.country" id="country" required>
+                            <option value="">Select Country</option>
+                            <option ng-repeat="country in countries" value="{{ country.id }}">{{ country.name }}
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label>Academic course <span class="req">*</span></label>
+                          <select id="acadamic_course" name="acadamic_course" ng-model="formData.acadamic_course"
+                            class="form-control" required>
+                            <option value="BA (AS)">Associate in Business Administration</option>
+                            <option value="BE (AS)">Associate in Business Entrepreneurship</option>
+                            <option value="BAMMIS (BS)">Bachelor's Degree in Business Administration with a major in
+                              Management Information Systems</option>
+                            <option value="HSA (BS)">Bachelor's Degree in Health Services Administration</option>
+                            <option value="MAS (BS)">Bachelor's Degree in Marketing and Sale</option>
+                            <option value="BA (MBA)">Master's Degree in Business Administration</option>
+                            <option value="MBAHRM">Master's Degree in Business Administration in Human Resources
+                              Management</option>
+                            <option value="(M.ED)">Master's Degree in Education with Concentration in Digital
+                              Technologies</option>
+                          </select>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+
+
+                  <div class="col-md-12">
+                    <!-- <div class="row">
+                      <div class="col-md-12 edu">
+                        <div class="form-group">
+                          <input type="checkbox" name="mycheckbox" id="mycheckbox" value="0" required="required" />
+                          <label style="color:red">I Agree to the declaration<span class="req">*</span></label>
+                        </div>
+                      </div>
+                    </div> -->
+                    <!-- <div class="row">
+                    <div class="col-md-2 edu">
+                      <strong>Captcha <span class="req">*</span></strong>
+                    </div>
+                    <div class="col-md-6 edu">
+                      <div class="form-group">
+                                            <div class="g-recaptcha" data-sitekey="6Ld04bQZAAAAAESEZ2t9Z8jge9k860wPt59Pcwus"></div>
+                                          </div>
+                    </div>
+                  </div> -->
+                    <div class="row">
+                      <div class="col-md-12 edu">
+                        <div class="form-group">
+                          <label></label>
+                          <button type="submit" class="btn btn-primary" name="register" id="register"
+                            ng-click="saveRequest('admission_form', formData);" ng-disabled="btndisabled">Save</button>
+                          <div class="pull-right">
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <div class="clearfix"></div>
+
+              </div>
+            </div>
+
+            <div class="col-md-2">
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<section class="about-new">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="images/h1-banner1.png" class="about-us-img" alt="BIR">
+      </div>
+      <div class="col-md-6">
+        <div class="about-us-content align-items-center">
+          <span class="sub-title-abt">About us</span>
+          <h2 class="about-heading-title">Expanding and raising the level of education.</h2>
+          <p class="abt-p">Bir Tikendrajit University is a new age university driving individual
+            empowerment and social progress through blended learning.</p>
+          <div class="row">
+            <div class="col-md-6 col-xs-12 col-sm-6">
+              <div class="support-card">
+                <div class="card-icon">
+                  <img src="images/experience1.png">
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title card-title-style">Experience </h3>
+                  <p class="abt-p">Our team has more than 4 years of unbeatable experience in
+                    guiding the students to a better future.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xs-12 col-sm-6">
+              <div class="support-card">
+                <div class="card-icon"><img src="images/support1.png">
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title card-title-style">
+                    Quick Support </h3>
+                  <p class="abt-p">Our team will be there for you wherever you are stuck.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="abt-p">The University has a curriculum designed by experts that can prepare students
+            for leadership roles in society.</p>
+          <!-- <a href="" class="read-more-btn"><span> </span></a> -->
+          <div class="text-center-mob">
+            <!-- <a href="">
+                          <button class="button-read-more"><span>Read More </span></button>
+                      </a> -->
+            <a href="about-us">
+              <button class="button-find-out"><span>Read More</span></button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="video-bg-section" style="min-height: 300px;height: auto;margin-top: 20px;">
+  <div class="container">
+    <div class="guide-content">
+      <h3 class="section-head"> Is UGC degree valid in USA? </h3>
+      <p class="guide-p">
+        Degrees that are offered by an Indian institution having a National Assessment and Accreditation Council score
+        of at least 3.01 or above are valid abroad. Some of the famous countries that consider UGC-approved degrees as
+        valid are the USA, the UK, Canada, Australia, Germany, New Zealand, UAE, and more.
+      </p>
+      <h3 class="section-head"> Is WES accepted in the USA? </h3>
+      <p class="guide-p">
+        WES evaluations are recognized and accepted by universities, licensing boards, government agencies and employers
+        throughout the U.S. WES is the largest and among the oldest of the evaluation services the U.S.
+        <br />
+        Each year, WES prepares evaluations for approximately 50,000 individuals from all over the world.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Design 2 -->
+<!-- <section class="become-collaborator">
+  <div class="container">
+    <div class="become-collaborator-head-content">
+      <h3 class="section-head become-coll">Our Courses </h3>
+      <p>
+        Right from its inception, BIR TIKENDRAJIT UNIVERSITY has been focused on raising overall standards by
+        benchmarking with the best in the world and by putting greater emphasis on research, innovation, and
+        employability.
+      </p>
+    </div>
+    <div class="row mob-center-col">
+      <div class="col-md-6 col-sm-6 col-xs-12 ">
+        <div class="banner-5-txt"><img src="images/courses/bechalar-of-arts.jpg" alt="Associate">
+          <div class="b5-txt">
+            <h4 class="h4-xs">Business Entrepreneurship</h4>
+            <p>It is the process of developing, organizing and managing a new business to generate profit while assuming
+              financial risk. </p>
+            <a href="course/business-entrepreneurship">
+              <button class="button-find-out"><span>Read More</span></button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12 ">
+        <div class="banner-5-txt"><img src="images/courses/Bachelor-of-Commerce.jpg" alt="Associate">
+          <div class="b5-txt">
+            <h4 class="h4-xs">Business Administration</h4>
+            <p>Business administration oversees the general operations of an organization or department. This may
+              include teams support and supervision, problem solving, developing and implementing plans, and meeting
+              goals. </p>
+            <a href="/course/business-administration">
+              <button class="button-find-out"><span>Read More</span></button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section> -->
+<!-- design 2 course -->
+
+<section class="top-courses">
+  <div class="container">
+    <div class="courses-head-content">
+      <h3 class="section-head">Our Course</h3>
+      <p>
+        Choose from 77+ undergraduate postgraduate courses in Management, Innovation, Science, Data, and
+        more.
+        <br>Gain new skills and earn a certificate of completion.
+      </p>
+    </div>
+    <div data-ng-include="'templates/course-content.html'"></div>
+  </div>
+
+</section>
+
+

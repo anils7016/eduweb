@@ -1,0 +1,87 @@
+  <div class="courses-head-content">
+    <h2 class=""> <i class="fas fa-graduation-cap	tile-icons" aria-hidden="true" style="color: black;float:initial;"></i> Associate</h2>
+  </div>
+  <div class="row mob-center-col">
+    <div class="col-md-2" ng-if="courseAcademic.length < 3"></div>
+    <div class="col-md-4 col-sm-4 col-xs-12" style="min-height:450px;max-height:450px" ng-repeat="course in courseAcademic">
+      <div class="coursebox">
+        <img class="card-img-top" src="images/courses/{{course.image}}" alt="Bachelor of Arts">
+        <div class="card-body">
+          <h5 class="card-title card-title-style">{{course.name}}</h5>
+          <p class="card-text">
+            {{course.short_desc}}
+          </p>
+          <div class="text-center-mob">
+            <a href="courses/{{course.slug_name}}">
+              <button class="button-view-price"><span>Read More</span></button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-md-4 col-sm-4 col-xs-12 " style="min-height:450px;max-height:450px">
+      <div class="coursebox">
+        <img class="card-img-top" src="images/courses/Bachelor-of-Journalism.png" alt="Bachelor of Science">
+        <div class="card-body">
+          <h5 class="card-title card-title-style">Business Administration</h5>
+          <p class="card-text"> 
+            Business administration oversees the general operations of an organization or department. This may
+            include teams support and supervision, problem solving, developing and implementing plans, and meeting
+            goals. 
+          </p>
+          <div class="text-center-mob">
+            <a target="_blank" href="/course/{{courseSlug}}">
+              <button class="button-view-price"><span>Read More</span></button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="col-md-2"></div>
+  </div>
+
+  <div class="courses-head-content">
+    <h2 class=""><i class="fas fa-graduation-cap	tile-icons" aria-hidden="true" style="color: black;float:initial;"></i> Bechelor</h2>
+  </div>
+  <div class="row mob-center-col">
+    <div class="col-md-4 col-sm-4 col-xs-12" style="min-height:450px;max-height:450px" ng-repeat="course in courseBechelor">
+      <div class="coursebox">
+        <img class="card-img-top" src="images/courses/{{course.image}}" alt="Bachelor of Arts">
+        <div class="card-body">
+          <h5 class="card-title card-title-style">{{course.name}}</h5>
+          <p class="card-text">
+            {{course.short_desc}}
+          </p>
+          <div class="text-center-mob">
+            <a href="courses/{{course.slug_name}}">
+              <button class="button-view-price"><span>Read More</span></button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="courses-head-content">
+    <h2 class=""> <i class="fas fa-graduation-cap	tile-icons" aria-hidden="true" style="color: black;float:initial;"></i> Master</h2>
+  </div>
+  <div class="row mob-center-col">
+    
+    <div class="col-md-4 col-sm-4 col-xs-12" style="min-height:450px;max-height:450px" ng-repeat="course in courseMaster">
+      <div class="coursebox">
+        <img class="card-img-top" src="images/courses/{{course.image}}" alt="Bachelor of Arts">
+        <div class="card-body">
+          <h5 class="card-title card-title-style">{{course.name}}</h5>
+          <p class="card-text">
+            {{course.short_desc}}
+          </p>
+          <div class="text-center-mob">
+            <a href="courses/{{course.slug_name}}">
+              <button class="button-view-price"><span>Read More</span></button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
