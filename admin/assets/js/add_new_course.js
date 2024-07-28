@@ -4,7 +4,6 @@ $(document).ready(function () {
 
     //CKEDITOR.replace('editor1');
 
-
     $('#courseNameMessage').hide();
     $('#courseDescNameMessage').hide();
     toastr.options = {
@@ -29,6 +28,8 @@ $(document).ready(function () {
         let courseName = $('#course_name').val();
         let courseDescription = $('#course_description').val();
         var formData = new FormData(this);
+        var sitebaseUrl = "<?php echo base_url(); ?>";
+
         if (courseName == "") {
             $('#courseNameMessage').text('Please enter course name.');
             $('#courseNameMessage').show();
@@ -44,7 +45,7 @@ $(document).ready(function () {
             $('#courseDescNameMessage').hide();
         }
         $.ajax({
-            url: 'course/saveCourse', // URL of the server-side script
+            url: siteBaseUrl+'course/saveCourse', // URL of the server-side script
             type: 'POST',
             // data: {
             //     courseName: courseName,
@@ -86,7 +87,9 @@ $(document).ready(function () {
                     } else {
                         courseImage = course.course_image;
                     }
-                    var editButton = '<button type="button" class="btn btn-primary btn-sm edit-btn" data-course-id="' + course.id + '">Edit</button>';
+                    var editUrl = '<a href='+baseUrl+'edit-course/'+course.id+'><button type="button" class="btn btn-primary m-2">Edit </button></a>';
+                    var editButton = '<button type="button" class="btn btn-primary btn-sm edit-btn" data-course-id="' + course.id + '">'+editUrl+'</button>';
+                    //var editButton = '<button type="button" class="btn btn-primary btn-sm edit-btn" data-course-id="' + course.id + '">Edit</button>';
                     var deleteButton = '<button type="button" class="btn btn-danger btn-sm delete-btn" data-course-id="' + course.id + '">Delete</button>';
                     var actionHtml = editButton + ' | ' + deleteButton;
                     if (course.is_active == 1) {

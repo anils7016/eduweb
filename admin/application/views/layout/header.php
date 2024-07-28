@@ -34,8 +34,25 @@
 
     <!-- Template Stylesheet -->
     <link href="<?php echo base_url('assets/css/style.css'); ?>" rel="stylesheet">
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
+    <!-- <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script> -->
+
+    <!-- ckeditor reachtext editor -->
+    <link rel="stylesheet" href="<?php echo base_url('assets/vendor/reach-texteditor/css/froala_editor.css')?>" >
+    <link rel="stylesheet" href="<?php echo base_url('assets/vendor/reach-texteditor/css/froala_style.css')?>" >
+    <link rel="stylesheet" href="<?php echo base_url('assets/vendor/reach-texteditor/css/plugins/code_view.css')?>" >
+    <link rel="stylesheet" href="<?php echo base_url('assets/vendor/reach-texteditor/css/plugins/colors.css')?>" >
+    <link rel="stylesheet" href="<?php echo base_url('assets/vendor/reach-texteditor/css/plugins/emoticons.css')?>" >
+    <link rel="stylesheet" href="<?php echo base_url('assets/vendor/reach-texteditor/css/plugins/image_manager.css')?>" >
+    <link rel="stylesheet" href="<?php echo base_url('assets/vendor/reach-texteditor/css/plugins/image.css')?>" >
+    <link rel="stylesheet" href="<?php echo base_url('assets/vendor/reach-texteditor/css/plugins/line_breaker.css')?>" >
+    <link rel="stylesheet" href="<?php echo base_url('assets/vendor/reach-texteditor/css/plugins/table.css')?>" >
+    <link rel="stylesheet" href="<?php echo base_url('assets/vendor/reach-texteditor/css/plugins/char_counter.css')?>" >
+    <link rel="stylesheet" href="<?php echo base_url('assets/vendor/reach-texteditor/css/plugins/video.css')?>" >
+    <link rel="stylesheet" href="<?php echo base_url('assets/vendor/reach-texteditor/css/plugins/fullscreen.css')?>" >
+    <link rel="stylesheet" href="<?php echo base_url('assets/vendor/reach-texteditor/css/plugins/file.css')?>" >
+    <link rel="stylesheet" href="<?php echo base_url('assets/vendor/reach-texteditor/css/plugins/quick_insert.css')?>" >
+  
 
 </head>
 

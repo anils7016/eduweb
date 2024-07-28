@@ -69,9 +69,12 @@ $route['login/logout'] = 'login/logout';
 
 $route['course-list'] = 'course/index';
 $route['add-new-course'] = 'course/addNewCourse';
+$route['edit-course/(:num)'] = 'course/editNewCourse/$1';
 $route['saveCourse'] = 'course/saveCourse';
 $route['getCourseList'] = 'course/getCourseList';
 
+$route['student-inquiry-list'] = 'course/getStudentInquiryList';
+$route['studentlist'] = 'course/getStudentList';
 // =====================================course=======================================
 
 // =====================================semester=======================================

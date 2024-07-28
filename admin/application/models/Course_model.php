@@ -30,9 +30,16 @@ class Course_model extends CI_Model
         $courseSaveArray['created_by'] = $this->session->userdata('user_id');
         $courseSaveArray['course_image'] = $file_name;
 
-        $courseSaveArray['created_date'] = time();
-
-        $getResult = $this->db->insert('courses_backend', $courseSaveArray);
+        
+        if(isset($post['course_id']) && $post['course_id']!=''){
+            $this->db->where('id', $post['course_id'] );
+            $getResult = $this->db->update('courses_backend', $courseSaveArray);
+        
+        }else{
+            $courseSaveArray['created_date'] = time();
+            $getResult = $this->db->insert('courses_backend', $courseSaveArray);
+        }
+        
         if ($getResult) {
             $result['error_code'] = 200;
             $result['data'] = $result;
@@ -68,4 +75,49 @@ class Course_model extends CI_Model
         }
         return $result;
     }
+
+    public function getCourseById($id)
+    {
+        $getResult = $this->db->select('courses.id,courses.course_name,courses.course_description, courses.is_active,courses.is_active,courses.created_by,courses.created_date,courses.modified_by,courses.modified_date,courses.course_image,edu_users.user_id,edu_users.first_name,edu_users.last_name')
+            ->from('courses_backend as courses')
+            ->join('edu_users', 'edu_users.created_by = courses.created_by', 'left')
+            ->where('courses.id', $id)
+            ->get()
+            ->result_array();
+        if ($getResult) {
+            $result['error_code'] = 200;
+            $result['data'] = $getResult;
+            $result['error_status'] = 'false';
+            $result['message'] = 'Course list get successfully.';
+        } else {
+            $result['error_code'] = 404;
+            $result['data'] = array();
+            $result['error_status'] = 'true';
+            $result['message'] = 'Unable to get course list. Please try again.';
+        }
+        return $result;
+    }
+
+    public function getStudentInquiryList()
+    {
+        $getResult = $this->db->select('s.*, c.name as countryName ')
+            ->from('student_inquiry as s')
+            ->join('countries c', 'c.id = s.country', 'left')
+            ->order_by('s.id', 'desc')
+            ->get()
+            ->result_array();
+        if ($getResult) {
+            $result['error_code'] = 200;
+            $result['data'] = $getResult;
+            $result['error_status'] = 'false';
+            $result['message'] = 'Course list get successfully.';
+        } else {
+            $result['error_code'] = 404;
+            $result['data'] = array();
+            $result['error_status'] = 'true';
+            $result['message'] = 'Unable to get course list. Please try again.';
+        }
+        return $result;
+    }
+
 }
