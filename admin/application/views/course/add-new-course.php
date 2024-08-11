@@ -3,18 +3,20 @@
 <script src="<?php echo base_url('assets/js/add_new_course.js') ?>"></script>
 <?php 
 //print_r($data[0]) ;
-$couseDetail = $courseName = $courseId = '';
+$couseDetail = $courseName = $courseId = $short_desc = $category ='';
 if(isset($data[0])){
    $couseDetail = $data[0]['course_description'];
    $courseName = $data[0]['course_name'];
+   $short_desc = $data[0]['short_desc'];
    $courseId = $data[0]['id'];
+   $category = $data[0]['category_id'];
 }
 
 ?>
                 
 <div class="container-fluid pt-4 px-4">
     <div class="row g-4">
-        <div class="col-sm-12 col-xl-6">
+        <div class="col-sm-12 col-xl-11">
             <div class="bg-light rounded h-100 p-4">
                 <h6 class="mb-4">Add new course</h6>
                 
@@ -25,6 +27,24 @@ if(isset($data[0])){
                         <input type="hidden" name="course_id" value="<?php echo $courseId; ?>">
                         <span id="courseNameMessage" class="text-danger"></span>
                     </div>
+                    <div class="mb-3">
+                        <label for="category_id">Select Category:</label>
+                        <select name="category_id" id="category_id" class="form-control" style='width:250px'>
+                            <option >Please select</option>
+                            <option value="1" <?php echo (isset($category) && $category == 1) ? 'selected' : ''; ?>>Associate</option>
+                            <option value="2" <?php echo (isset($category) && $category == 2) ? 'selected' : ''; ?>>Bachelor</option>
+                            <option value="3" <?php echo (isset($category) && $category == 3) ? 'selected' : ''; ?>>Master</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="short_desc">Short detail:</label>
+
+                        <textarea class="form-control" placeholder="Short description" name="short_desc" id="short_desc">
+                        <?php echo $short_desc; ?>
+                        </textarea>
+                    </div>
+
                     <div class="form-floating mb-3">
 
                     <!-- <textarea class="form-control" placeholder="Leave a comment here" name="course_description" id="course_description" style="height: 150px;"></textarea> -->

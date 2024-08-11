@@ -15,7 +15,6 @@
                             <th scope="col">#</th>
                             <th scope="col">Course Name</th>
                             <th scope="col">Course Image</th>
-                            <th scope="col">Created By</th>
                             <th scope="col">Status</th>
                             <th scope="col">Action</th>
                         </tr>

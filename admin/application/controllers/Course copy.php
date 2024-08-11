@@ -55,14 +55,6 @@ class Course extends CI_Controller
         $this->load->view('layout/footer');
     }
 
-    public function deleteCourse(){
-        $result = $this->Course_model->deleteCourse($this->input->post());
-        // Send JSON response
-        $this->output
-            ->set_content_type('application/json')
-            ->set_output(json_encode($result));
-    }
-
     public function getStudentInquiryList(){
         // Send JSON response
         // $this->output

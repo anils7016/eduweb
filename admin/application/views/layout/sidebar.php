@@ -29,7 +29,8 @@
             <!-- <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a> -->
             <!-- <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a> -->
             <a href="<?php echo base_url('student-inquiry-list')?>" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Student Inquiry</a>
-            <div class="nav-item dropdown">
+            <a href="<?php echo base_url('course-list')?>" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Course</a>
+            <!-- <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
                 <div class="dropdown-menu bg-transparent border-0">
                     <!-- <a href="<?php echo base_url('login'); ?>" class="dropdown-item">Login</a> -->
@@ -40,7 +41,7 @@
                     <a href="<?php echo base_url('semester-list')?>" class="dropdown-item">Semester</a>
                     <a href="<?php echo base_url('subject-list')?>" class="dropdown-item">Subject</a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </nav>
 </div>
